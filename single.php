@@ -14,7 +14,7 @@
 		
 			<?php while (have_posts()) : the_post(); ?>
 
-<?php include( 'ads/728x90.php' ); ?>
+				<?php include( 'ads/728x90.php' ); ?>
 
 				<?php 
 
@@ -36,7 +36,7 @@
 				<div class="comments">
 				<?php comments_template('', true); ?>
 				</div>
-	
+
 			<?php endwhile; // end of the loop. ?>
 
 		</div>
