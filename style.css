@@ -1,0 +1,64 @@
+/*
+Theme Name: BlenderNation
+Theme URI: http://www.blendernation.com
+Template: smart-mag
+Version: 3.0
+*/
+
+@import url("../smart-mag/style.css");
+
+/* header */
+
+.logo-image {
+	position:relative;
+	float:left;
+	top:-310px;
+	left:10px;
+}
+
+.title {
+	height:310px;
+}
+
+#header_name {
+	position:relative;
+	bottom:28px;
+	left:800px;
+	text-align:right;
+	width:250px;
+	color:#fff;
+	font-size:10pt;
+	font-weight:bold;
+	text-shadow: #555 2px 2px 2px;
+}
+
+.main-head header {
+	line-height:0px;
+}
+
+
+/* make space for ads */
+.main .sidebar { width: 31%; }
+.main-content { width: 69%; }
+
+
+.news-focus .section-head .cat-8 {
+	background:#ff0;
+}
+
+.post-header .featured {
+	margin-top:32px;
+}
+
+
+
+#adblock-notice {
+	background-color: #f1784d;
+	padding:10px;
+	color:#fff;
+	font-weight:bold;	
+	display:none;
+	width: 708px;
+	height: 70px;
+	margin-top:0px;
+}
