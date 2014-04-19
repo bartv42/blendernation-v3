@@ -62,3 +62,18 @@ Version: 3.0
 	height: 70px;
 	margin-top:0px;
 }
+
+/* search box */
+
+.search-form .search-field {
+   width: 100%;
+}
+.search-form .search-submit {
+   float: right;
+   margin-top: -34px;
+}
+.search-form &gt; label {
+   display: block;
+   padding-right: 73px;
+   overflow: hidden;
+} 
