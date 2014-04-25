@@ -38,12 +38,12 @@ function bn_get_header() {
 
 	// get timestamp of current post, or of current moment
 	global $post; 
-
+	
 	if( ('headers' == get_post_type( $post )) ) {
 		$header = $post;		
 	} else {
 
-		if( ('post' == get_post_type( $post )) ) {
+		if( ('post' == get_post_type( $post ) && !is_category()) ) {
 			$dateTime = DateTime::createfromformat( 'Y-m-d H:i:s',$post->post_date);
 			$timestamp = $dateTime->getTimeStamp();
 		} else {
