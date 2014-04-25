@@ -14,7 +14,7 @@
 		
 			<?php while (have_posts()) : the_post(); ?>
 
-				<?php include( 'ads/728x90.php' ); ?>
+				<?php include( 'ads/responsive.php' ); ?>
 
 				<?php 
 

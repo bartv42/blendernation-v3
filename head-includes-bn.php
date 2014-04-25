@@ -9,3 +9,6 @@
 })();
 </script>
 <!-- End BuySellAds Ad Code -->
+
+<!-- Adblock detect -->
+<script data-cfasync="false" src="/blendernation/wp-content/themes/blendernation-v3/js/ads.js"></script>

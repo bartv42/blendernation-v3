@@ -1,8 +1,11 @@
 <?php
 
+include('shortcodes/shortcodes.php');
+
 define("BN_ADS", "adsense");
 //define("BN_ADS", "dfp");
 
+/* change theme width */
 $content_width = 728;
 add_image_size('main-slider', 728, 336, true);
 
