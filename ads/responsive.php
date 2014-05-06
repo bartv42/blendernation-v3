@@ -21,8 +21,15 @@ $bn_adunit++;
 </div>
 
 <div class="adblock-notice" id="bn-adunit-<?=$bn_adunit?>">
-	Oh no! It looks like you're using an ad blocker. I really need an income to keep this site running, so please enable advertisements on BlenderNation, or <a href="test">read about other ways to support me
-	</a>. Everything helps, thanks!
+	It looks like you're using an ad blocker. I really need the income to keep this site running, so please enable advertisements on BlenderNation, or leave me a small donation. Everything helps! 
+
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="padding:0px;margin:0px;">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="ELYFS4VZXGQBQ">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" style="padding:0px;margin:5px 0 0 0;background:none;border:none;">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>	
+	
 </div>
 
 <script>

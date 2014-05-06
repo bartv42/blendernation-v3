@@ -47,5 +47,12 @@ s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
 }());
 </script>
 
+<!-- prevent white flash on images after page load -->
+<script>
+jQuery(function($) {
+    $('.highlights .image-link img').show();
+});
+</script>
+
 </body>
 </html>

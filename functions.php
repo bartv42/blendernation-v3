@@ -27,7 +27,6 @@ register_post_type('headers', array(	'label' => 'Headers','description' => '','p
   'parent' => 'Parent Header',
 ),) );
 
-
 /***
  * Returns header graphic, either for today, or in the case of single posts for the post's date.
  */
@@ -39,13 +38,15 @@ function bn_get_header() {
 	// get timestamp of current post, or of current moment
 	global $post; 
 	
+
 	if( ('headers' == get_post_type( $post )) ) {
 		$header = $post;		
 	} else {
 
-		if( ('post' == get_post_type( $post ) && !is_category()) ) {
+		if( ('post' == get_post_type( $post ) && !is_home() && !is_category()) ) {
 			$dateTime = DateTime::createfromformat( 'Y-m-d H:i:s',$post->post_date);
 			$timestamp = $dateTime->getTimeStamp();
+			
 		} else {
 			$timestamp = time();
 		}
@@ -61,7 +62,8 @@ function bn_get_header() {
 							'year'  => $date['year'],
 							'month' => $date['mon'],
 							'day'   => $date['mday'],
-						
+							'hour'	=> 23,
+							'minute' => 59						
 						),
 						'inclusive' => true,
 					),		
@@ -172,9 +174,36 @@ add_action( 'pre_get_posts', 'my_search_query' );
  * unwanted HTML. By removing editor-style.css from the $editor_styles
  * global, this code effectively undoes the call to add_editor_style()
  */
+
+/*
 add_action( 'after_setup_theme', 'foobar_setup', 11 );
 function foobar_setup() {
   global $editor_styles;
   $editor_styles = array();
 }
+*/
+
+//Function to add featured image in RSS feeds
+function featured_image_in_rss($content)
+{
+    // Global $post variable
+    global $post;
+    // Check if the post has a featured image
+    if (has_post_thumbnail($post->ID))
+    {
+        $content = get_the_post_thumbnail($post->ID, 'medium', array('style' => 'margin-bottom:10px;')) . $content;
+    }
+    return $content;
+}
+//Add the filter for RSS feeds Excerpt
+add_filter('the_excerpt_rss', 'featured_image_in_rss');
+//Add the filter for RSS feed content
+add_filter('the_content_feed', 'featured_image_in_rss');
+
+/* editor styling */
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+//add_action( 'init', 'my_theme_add_editor_styles' );
+
 ?>

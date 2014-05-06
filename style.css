@@ -93,7 +93,18 @@ max-width: 100%;
 
 /* navigation */
 
-#menu-item-151 a {
+#menu-item-151 a,
+#menu-item-25123 a {
 	color: #f1784d;
 	font-weight:bold;
 }
+
+/* Gravity Forms Conditinal fix */
+#gform_wrapper_1 {
+	display:block!important;
+}
+
+/* prevent white flash on images after page load */
+/*
+.highlights .image-link img { display: none; }
+*/

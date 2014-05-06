@@ -31,7 +31,7 @@
 					endif; 
 				?>
 
-			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 
 				<div class="comments">
 				<?php comments_template('', true); ?>
