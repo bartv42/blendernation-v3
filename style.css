@@ -105,6 +105,21 @@ max-width: 100%;
 }
 
 /* prevent white flash on images after page load */
-/*
 .highlights .image-link img { display: none; }
-*/
+
+/* mega menu delay on hover */
+.navigation .mega-menu {
+    -webkit-transition-delay: .5s; 
+    -moz-transition-delay: .5s; 
+    -ms-transition-delay: .5s; 
+    -o-transition-delay: .5s; 
+    transition-delay: .5s; 
+}
+
+.navigation .mega-menu:hover {
+    -webkit-transition-delay: 0; 
+    -moz-transition-delay: 0; 
+    -ms-transition-delay: 0; 
+    -o-transition-delay: 0; 
+    transition-delay: 0; 
+}
