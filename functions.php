@@ -206,4 +206,29 @@ function my_theme_add_editor_styles() {
 }
 //add_action( 'init', 'my_theme_add_editor_styles' );
 
+
+
+/***
+ * Clear the CloudFlare cache with a CURL call both when publishing new posts or when updating existing ones.
+ * Clears both the website's homepage and the post's url
+ */
+function bn_clear_cloudflare_cache_action($new_status, $old_status, $post) {
+
+	/* fire both on publishing and updating */
+    if ( $new_status == 'publish') {
+		$url = get_permalink($postID);
+		
+		bn_clear_cloudflare_cache('http://www.blendernation.com/');
+		bn_clear_cloudflare_cache($url);
+    }
+}
+
+function bn_clear_cloudflare_cache($url) {
+	$command = "curl -ipv4 https://www.cloudflare.com/api_json.html -d 'a=zone_file_purge' -d 'tkn=4092f9a010bd0cced3f3b64efbe7c950313c1' -d 'email=cloudflare@v-int.nl' -d 'z=blendernation.com' -d 'url=$url'";
+	
+	exec($command);
+}
+
+add_action( 'transition_post_status', 'bn_clear_cloudflare_cache_action', 10, 3 );
+
 ?>
