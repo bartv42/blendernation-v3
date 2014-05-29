@@ -63,7 +63,7 @@
 					<?php echo apply_filters('bunyad_review_main_snippet', ''); ?>
 					
 					<span class="comments">
-						&nbsp;<a href="<?php the_permalink(); ?>#disqus_thread"><?php echo get_comments_number(); ?></a>
+						&nbsp;<a href="<?php the_permalink(); ?>"><?php echo get_comments_number(); ?></a>
 					</span>
 
 					<span class="comments" style="margin-right:0px;">
