@@ -22,7 +22,7 @@ $bn_adunit++;
 
 <div class="adblock-notice" id="bn-adunit-<?=$bn_adunit?>">
 	It looks like you're using an ad blocker! I really need the income to keep this site running.
-	<br/>If you enjoy BlenderNation and you think it’s a valuable resource to the Blender community, please take a moment to <a href="http://www.blendernation.com/support-blendernation/" style="color:#fff;font-weight:bold;text-decoration:underline;">read how you can support BlenderNation</a>.
+	<br/>If you enjoy BlenderNation and you think it’s a valuable resource to the Blender community, please take a moment to <a href="http://www.blendernation.com/support-blendernation/?utm_source=blendernation&utm_medium=web&utm_campaign=support-adblock" style="color:#fff;font-weight:bold;text-decoration:underline;">read how you can support BlenderNation</a>.
 
 <!--
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="padding:0px;margin:0px;">
