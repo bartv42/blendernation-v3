@@ -123,3 +123,8 @@ max-width: 100%;
     -o-transition-delay: 0; 
     transition-delay: 0; 
 }
+
+/* comments section */
+.comments {
+	padding-top:10px;
+}
